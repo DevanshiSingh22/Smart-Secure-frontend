@@ -1,0 +1,212 @@
+/* Import Playfair Display from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}*/
+
+
+/*visitor status*/
+
+.status-badge{
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+}
+
+.status-pending{
+  background-color:#facc15;
+  color: #222;
+}
+
+.status-approved,
+.status-checked-in {
+  background-color: #0e9640; /* green */
+  color: white;
+}
+
+.status-rejected {
+  background-color: #ef4444; /* red */
+  color: white;
+}
+
+.status-pre-approved {
+  background-color: #3b82f6; /* blue */
+  color: white;
+}
+
+/* ================= AI Chatbot Global Styles ================= */
+
+/* ================= AI Chatbot Fixed Bottom-Left ================= */
+
+/* Robot Icon */
+.ai-icon {
+  position: fixed;          /* fixed in viewport */
+  bottom: 20px;             /* distance from bottom */
+  left: 20px;               /* distance from left */
+  width: 70px;              /* cute size */
+  height: 70px;
+  border-radius: 50%;
+  /*background: #00bfff;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-icon img {
+  width: 70%;    /* scale image inside circle */
+  height: 70%;
+  object-fit: contain;
+}
+
+.ai-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Chat Window */
+.chat-window {
+  position: fixed;           /* fixed so it doesn't scroll */
+  bottom: 80px;              /* above the icon */
+  left: 20px;
+  width: 320px;
+  max-height: 450px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1001;
+  font-family: Arial, sans-serif;
+}
+
+/* Chat Header */
+.chat-header {
+  background: linear-gradient(90deg, #e8775b, #ac2e04);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Chat Messages */
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Message bubbles */
+.chat-message {
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background-color: #ba431f;
+  color: white;
+}
+
+.chat-message.ai {
+  align-self: flex-start;
+  background-color: #f1f5f9;
+  color: #111;
+}
+
+/* Input area */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  background-color: #ba431f;
+  color: white;
+  padding: 0 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #ac2e04;
+}
+
+.robot-icon {
+  width: 30px;             
+  height: 30px;            
+  object-fit: contain;
+  filter: invert(1) sepia(1) saturate(0) brightness(2); 
+  transition: transform 0.3s ease;
+}
+
+.robot-icon:hover {
+  transform: scale(1.2);   /* optional hover effect */
+}

@@ -1,0 +1,177 @@
+/* ====== Register Page Layout ====== */
+.register-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #e06644; /* peachish background */
+  overflow-x: hidden;
+}
+
+/* Left side image */
+.register-page .image-side {
+  flex: 1;
+  background: url('/register.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Right side form */
+.register-page .form-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Frosted-glass register box */
+.form-box {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Inputs */
+.form-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-box input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Frosted-glass effect on focus */
+.form-box input:focus {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Button styling */
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #00bfff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.2s ease;
+}
+
+.form-box button:hover {
+  background-color: #007acc;
+  transform: translateY(-2px);
+}
+
+/* Error message */
+.error {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Register text */
+.register-text {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #f1f1f1;
+}
+
+.register-text a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Custom frosted-glass dropdown ====== */
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.custom-select {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.custom-select .selected {
+  padding: 12px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.custom-select .options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(50px);
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  transition: all 3s ease;
+}
+
+.custom-select .options li {
+  padding: 12px;
+  color: #771e03;
+  transition: background 3s ease;
+}
+
+.custom-select .options li:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #000;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px) {
+  .register-page {
+    flex-direction: column;
+  }
+  .register-page .image-side {
+    height: 200px;
+    width: 100%;
+  }
+  .register-page .form-side {
+    width: 100%;
+    padding: 20px;
+  }
+}

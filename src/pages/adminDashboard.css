@@ -1,0 +1,88 @@
+/* ===== Body ===== */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  border: 15px solid #e06644; /* thick border */
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/* ===== Admin Dashboard Container ===== */
+.admin-dashboard {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #3b1e0f;
+  font-family: 'Playfair Display', serif; /* stylish font */
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: url('/admin-hero.jpg') center/cover no-repeat; /* replace with your image */
+  border-radius: 12px;
+}
+
+.hero-overlay {
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 12px;
+  background: rgba(224, 102, 68, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Hero Image Placeholder */
+.hero-image-placeholder {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  margin: 20px auto;
+  border-radius: 12px;
+  background: url('/admin.jpg') center/cover no-repeat; /* replace with your image */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Sections */
+.section-container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 1200px;
+  color: #3b1e0f;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid #e06644;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-overlay h1 {
+    font-size: 1.8rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+  .hero-image-placeholder {
+    height: 250px;
+  }
+}
