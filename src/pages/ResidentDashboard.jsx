@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./residentDashboard.css";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const ResidentDashboard = () => {
   const [visitors, setVisitors] = useState([]);
@@ -30,7 +31,7 @@ const ResidentDashboard = () => {
 
   const fetchVisitors = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/visitors", {
+      const res = await axios.get(`${BACKEND_URL}/api/visitors`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setVisitors(res.data);
@@ -41,7 +42,7 @@ const ResidentDashboard = () => {
 
   const fetchPreApprovedVisitors = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/visitors/pre-approved", {
+      const res = await axios.get(`${BACKEND_URL}/api/visitors/pre-approved`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPreApprovedVisitors(res.data);
@@ -52,7 +53,7 @@ const ResidentDashboard = () => {
 
   const handleApprove = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/visitors/${id}/approve`, {}, {
+      await axios.put(`${BACKEND_URL}/api/visitors/${id}/approve`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchVisitors();
@@ -63,7 +64,7 @@ const ResidentDashboard = () => {
 
   const handleReject = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/visitors/${id}/reject`, {}, {
+      await axios.put(`${BACKEND_URL}/api/visitors/${id}/reject`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchVisitors();
@@ -77,7 +78,7 @@ const ResidentDashboard = () => {
     try {
       const { name, contact, purpose, timeWindow } = form;
       await axios.post(
-        "http://localhost:5000/api/visitors/pre-approve",
+        `${BACKEND_URL}/api/visitors/pre-approve`,
         { name, contact, purpose, timeWindow },
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import './guardDashboard.css';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 const GuardDashboard = () => {
   const [residents, setResidents] = useState([]);
@@ -13,7 +15,7 @@ const GuardDashboard = () => {
   // Fetch all residents
   const fetchResidents = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/auth/residents", {
+      const res = await axios.get(`${BACKEND_URL}/api/auth/residents`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setResidents(res.data);
@@ -25,7 +27,7 @@ const GuardDashboard = () => {
   // Fetch all visitors
   const fetchVisitors = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/visitors", {
+      const res = await axios.get(`${BACKEND_URL}/api/visitors`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setVisitors(res.data);
@@ -43,7 +45,7 @@ const GuardDashboard = () => {
   // Check-In visitor
   const handleCheckIn = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/visitors/${id}/checkin`, {}, {
+      await axios.put(`${BACKEND_URL}/api/visitors/${id}/checkin`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchVisitors();
@@ -56,7 +58,7 @@ const GuardDashboard = () => {
   // Check-Out visitor
   const handleCheckOut = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/visitors/${id}/checkout`, {}, {
+      await axios.put(`${BACKEND_URL}/api/visitors/${id}/checkout`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchVisitors();
@@ -97,7 +99,7 @@ const GuardDashboard = () => {
             const { name, contact, purpose, resident } = e.target.elements;
             try {
               await axios.post(
-                "http://localhost:5000/api/visitors/add",
+                 `${BACKEND_URL}/api/visitors/add`,
                 {
                   name: name.value,
                   contact: contact.value,
