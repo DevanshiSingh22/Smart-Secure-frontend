@@ -156,15 +156,61 @@
   font-weight: bold;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
+/*  Responsive */
+
+@media (max-width: 1200px) {
   .guard-dashboard .hero-overlay {
-    padding: 30px 15px;
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .guard-dashboard .hero-section {
+    height: 60vh;
+  }
+  .guard-dashboard .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .guard-dashboard .hero-section {
+    height: 50vh;
   }
   .guard-dashboard .hero-overlay h1 {
     font-size: 2rem;
   }
-  .guard-dashboard table {
+  .guard-dashboard .hero-buttons button {
+    padding: 10px 15px;
     font-size: 0.9rem;
   }
+  .guard-dashboard table,
+  .guard-dashboard form input,
+  .guard-dashboard form select,
+  .guard-dashboard form button {
+    font-size: 0.85rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .guard-dashboard .hero-overlay {
+    padding: 20px 10px;
+  }
+
+  .guard-dashboard .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .guard-dashboard .hero-buttons button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .guard-dashboard table,
+  .guard-dashboard form input,
+  .guard-dashboard form select {
+    font-size: 0.75rem;
+  }
+}
+
+

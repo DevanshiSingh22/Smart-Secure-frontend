@@ -15,7 +15,7 @@ const GuardDashboard = () => {
   // Fetch all residents
   const fetchResidents = async () => {
     try {
-      const res = await axios.get(`${BACKEND_URL}/api/auth/residents`, {
+      const res = await axios.get(`${BACKEND_URL}/api/auth`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setResidents(res.data);

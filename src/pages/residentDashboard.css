@@ -179,19 +179,62 @@
   font-weight: bold;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
+/*  RESIDENT DASHBOARD RESPONSIVE*/
+
+@media (max-width: 1200px) {
   .resident-dashboard .hero-overlay {
-    padding: 30px 15px;
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .resident-dashboard .hero-section {
+    height: 60vh;
+  }
+  .resident-dashboard .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .resident-dashboard .hero-section {
+    height: 50vh;
   }
   .resident-dashboard .hero-overlay h1 {
     font-size: 2rem;
   }
-  .resident-dashboard .hero-overlay p {
-    font-size: 1rem;
+  .resident-dashboard .hero-buttons button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
   }
   .resident-dashboard table,
-  .resident-dashboard .pre-approved-table {
-    font-size: 0.9rem;
+  .resident-dashboard .pre-approved-table,
+  .resident-dashboard .search-form input,
+  .resident-dashboard .pre-approve-form input,
+  .resident-dashboard form select,
+  .resident-dashboard .search-form button,
+  .resident-dashboard .pre-approve-form button {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resident-dashboard .hero-overlay {
+    padding: 20px 10px;
+  }
+
+  .resident-dashboard .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .resident-dashboard .hero-buttons button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .resident-dashboard table,
+  .resident-dashboard .pre-approved-table,
+  .resident-dashboard form select {
+    font-size: 0.75rem;
   }
 }
