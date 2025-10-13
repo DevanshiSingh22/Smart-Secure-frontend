@@ -1,9 +1,9 @@
-/* ===== Body ===== */
+/* ===== Body =====*/
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  border: 15px solid #e06644; /* thick border */
+  border: 15px solid #e06644; 
   box-sizing: border-box;
   background-color: #fff;
 }
@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   color: #3b1e0f;
-  font-family: 'Playfair Display', serif; /* stylish font */
+  font-family: 'Playfair Display', serif; 
 }
 
 /* ===== Hero Section ===== */
@@ -26,7 +26,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  background: url('/admin-hero.jpg') center/cover no-repeat; /* replace with your image */
+  background: url('/admin-hero.jpg') center/cover no-repeat; 
   border-radius: 12px;
 }
 
@@ -57,7 +57,7 @@ body {
   height: 350px;
   margin: 20px auto;
   border-radius: 12px;
-  background: url('/admin.jpg') center/cover no-repeat; /* replace with your image */
+  background: url('/admin.jpg') center/cover no-repeat; 
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 

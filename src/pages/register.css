@@ -2,7 +2,7 @@
 .register-page {
   display: flex;
   min-height: 100vh;
-  background-color: #e06644; /* peachish background */
+  background-color: #e06644; 
   overflow-x: hidden;
 }
 

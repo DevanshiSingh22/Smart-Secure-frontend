@@ -1,4 +1,4 @@
-/* Import Playfair Display from Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 
 #root {
@@ -79,16 +79,14 @@
   color: white;
 }
 
-/* ================= AI Chatbot Global Styles ================= */
 
-/* ================= AI Chatbot Fixed Bottom-Left ================= */
 
 /* Robot Icon */
 .ai-icon {
-  position: fixed;          /* fixed in viewport */
-  bottom: 20px;             /* distance from bottom */
-  left: 20px;               /* distance from left */
-  width: 70px;              /* cute size */
+  position: fixed;          
+  bottom: 20px;             
+  left: 20px;               
+  width: 70px;              
   height: 70px;
   border-radius: 50%;
   /*background: #00bfff;*/
@@ -102,7 +100,7 @@
 }
 
 .ai-icon img {
-  width: 70%;    /* scale image inside circle */
+  width: 70%;    
   height: 70%;
   object-fit: contain;
 }
@@ -114,8 +112,8 @@
 
 /* Chat Window */
 .chat-window {
-  position: fixed;           /* fixed so it doesn't scroll */
-  bottom: 80px;              /* above the icon */
+  position: fixed;           
+  bottom: 80px;              
   left: 20px;
   width: 320px;
   max-height: 450px;
@@ -208,5 +206,5 @@
 }
 
 .robot-icon:hover {
-  transform: scale(1.2);   /* optional hover effect */
+  transform: scale(1.2);   
 }

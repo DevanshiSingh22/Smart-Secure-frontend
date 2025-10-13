@@ -8,7 +8,7 @@ const Login = ({ setUser }) => {
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
-  const [showPassword, setShowPassword] = useState(false); // ✅ password toggle state
+  const [showPassword, setShowPassword] = useState(false);
 
   // Handle input change
   const handleChange = (e) => {
@@ -46,19 +46,19 @@ const Login = ({ setUser }) => {
 
   return (
     <div className="login-page">
-      {/* 🎥 Background Video */}
+      {/*  Background Video */}
       <video autoPlay loop muted playsInline className="background-video">
         <source src={bgVideo} type="video/mp4" />
       </video>
 
-      {/* 🌟 Hero Section */}
+      {/*  Hero Section */}
       <div className="hero-content">
         <h1>Welcome to SmartSecure</h1>
         <p className="subtitle">Your smart security assistant for safer communities</p>
         <button onClick={scrollToLogin}>Get Started</button>
       </div>
 
-      {/* 🔐 Login Form Section */}
+      {/*  Login Form Section */}
       <div id="login-section" className="login-section">
         <div className="form-box">
           <h2>Login</h2>
@@ -74,7 +74,7 @@ const Login = ({ setUser }) => {
             />
             <div className="password-wrapper" style={{ position: "relative" }}>
               <input
-                type={showPassword ? "text" : "password"} // ✅ toggle type
+                type={showPassword ? "text" : "password"} 
                 name="password"
                 placeholder="Enter your password"
                 value={form.password}

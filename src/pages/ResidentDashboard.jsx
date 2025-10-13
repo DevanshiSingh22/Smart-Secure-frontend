@@ -8,7 +8,7 @@ const ResidentDashboard = () => {
   const [preApprovedVisitors, setPreApprovedVisitors] = useState({ active: [], expired: [] });
   const [form, setForm] = useState({ name: "", contact: "", purpose: "", timeWindow: 6 });
   const [search, setSearch] = useState({ name: "", date: "", purpose: "" });
-  const [hoverRating, setHoverRating] = useState({}); // for hover effect
+  const [hoverRating, setHoverRating] = useState({}); 
   const token = localStorage.getItem("token");
   const user = JSON.parse(localStorage.getItem("user"));
 

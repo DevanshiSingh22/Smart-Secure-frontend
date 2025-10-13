@@ -5,7 +5,7 @@ import "./adminDashboard.css";
 const AdminDashboard = ({ setUser }) => {
   return (
     <div className="admin-dashboard">
-      {/* Hero Section with frosted glass overlay */}
+      {/* Hero Section with frosted glass overlay*/}
       <section className="hero-section">
         <div className="hero-overlay">
           <h1>Oopss… We’re Still Expanding!</h1>
@@ -19,7 +19,7 @@ const AdminDashboard = ({ setUser }) => {
 
       {/* Image placeholder */}
       <div className="hero-image-placeholder">
-        {/* Replace the background image in CSS or insert an <img> here */}
+       
       </div>
 
       <section className="section-container">
