@@ -213,10 +213,9 @@
   }
 }
 
-/* ===== RESPONSIVE TABLE FIX (safe and non-structural) ===== */
+/* ===== RESPONSIVE TABLE FIX (Guard Dashboard only) ===== */
 @media (max-width: 768px) {
-  .resident-dashboard table,
-  .resident-dashboard .pre-approved-table {
+  .guard-dashboard table {
     width: 100%;
     display: block;
     overflow-x: auto;
@@ -224,21 +223,20 @@
     white-space: nowrap;
   }
 
-  .resident-dashboard th,
-  .resident-dashboard td {
+  .guard-dashboard th,
+  .guard-dashboard td {
     font-size: 0.85rem;
     padding: 8px 10px;
   }
 }
 
 @media (max-width: 480px) {
-  .resident-dashboard table,
-  .resident-dashboard .pre-approved-table {
+  .guard-dashboard table {
     font-size: 0.75rem;
   }
 
-  .resident-dashboard th,
-  .resident-dashboard td {
+  .guard-dashboard th,
+  .guard-dashboard td {
     padding: 6px 8px;
   }
 }
