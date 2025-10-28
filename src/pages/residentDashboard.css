@@ -239,36 +239,32 @@
   }
 }
 
-/* ===== RESPONSIVE TABLE FIX (no structural change) ===== */
-@media (max-width: 1024px) {
-  table {
-    font-size: 0.9rem;
-  }
-  th, td {
-    padding: 10px;
-  }
-}
-
+/* ===== RESPONSIVE TABLE FIX (safe and non-structural) ===== */
 @media (max-width: 768px) {
-  table {
-    display: block;
+  .resident-dashboard table,
+  .resident-dashboard .pre-approved-table {
     width: 100%;
+    display: block;
     overflow-x: auto;
-    border-collapse: collapse;
+    -webkit-overflow-scrolling: touch;
     white-space: nowrap;
   }
 
-  th, td {
-    padding: 8px 10px;
+  .resident-dashboard th,
+  .resident-dashboard td {
     font-size: 0.85rem;
+    padding: 8px 10px;
   }
 }
 
 @media (max-width: 480px) {
-  table {
+  .resident-dashboard table,
+  .resident-dashboard .pre-approved-table {
     font-size: 0.75rem;
   }
-  th, td {
+
+  .resident-dashboard th,
+  .resident-dashboard td {
     padding: 6px 8px;
   }
 }
