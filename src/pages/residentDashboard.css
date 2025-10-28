@@ -238,3 +238,48 @@
     font-size: 0.75rem;
   }
 }
+
+@media (max-width: 1024px) {
+  table {
+    width: 100%;
+  }
+
+  table th,
+  table td {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  table th,
+  table td {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+
+  table th {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 600px) {
+  table {
+    width: 100%;
+    border-spacing: 0;
+  }
+
+  table th,
+  table td {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  table th,
+  table td {
+    font-size: 0.75rem;
+    padding: 5px 6px;
+  }
+}
