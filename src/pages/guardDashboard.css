@@ -213,48 +213,37 @@
   }
 }
 
+/* ===== RESPONSIVE TABLE FIX (no structural change) ===== */
 @media (max-width: 1024px) {
   table {
-    width: 100%;
-  }
-
-  table th,
-  table td {
     font-size: 0.9rem;
-    padding: 10px 12px;
+  }
+  th, td {
+    padding: 10px;
   }
 }
 
 @media (max-width: 768px) {
-  table th,
-  table td {
-    font-size: 0.85rem;
-    padding: 8px 10px;
-  }
-
-  table th {
-    font-weight: 600;
-  }
-}
-
-@media (max-width: 600px) {
   table {
+    display: block;
     width: 100%;
-    border-spacing: 0;
+    overflow-x: auto;
+    border-collapse: collapse;
+    white-space: nowrap;
   }
 
-  table th,
-  table td {
-    font-size: 0.8rem;
-    padding: 6px 8px;
+  th, td {
+    padding: 8px 10px;
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
-  table th,
-  table td {
+  table {
     font-size: 0.75rem;
-    padding: 5px 6px;
+  }
+  th, td {
+    padding: 6px 8px;
   }
 }
 
